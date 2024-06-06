@@ -10,7 +10,7 @@
       system = "x86_64-linux";
       modules = [
         Jovian-NixOS.nixosModules.default
-        nixos-generators.nixosModules.raw
+        nixos-generators.nixosModules.raw-efi
       ] ++ [ ./configuration.nix ];
     };
 
