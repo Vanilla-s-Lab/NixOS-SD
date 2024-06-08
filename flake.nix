@@ -9,13 +9,16 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
+  inputs.nur.url = github:nix-community/NUR;
   outputs = inputs@{ nixpkgs, home-manager, ... }: rec {
     nixosConfigurations."NixOS-SD" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
 
-      modules = [
-        inputs.Jovian-NixOS.nixosModules.default
-        inputs.nixos-generators.nixosModules.raw-efi
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+
+      modules = with inputs; [
+        Jovian-NixOS.nixosModules.default
+        nixos-generators.nixosModules.raw-efi
 
         ./configuration.nix
         home-manager.nixosModules.home-manager
@@ -33,8 +36,9 @@
       profiles.system = {
         sshUser = "root";
 
-        path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos
-          inputs.self.nixosConfigurations."NixOS-SD";
+        path = with inputs;
+          deploy-rs.lib.x86_64-linux.activate.nixos
+            self.nixosConfigurations."NixOS-SD";
       };
     };
   };
