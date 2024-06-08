@@ -2,7 +2,6 @@
 {
   imports = [
     ./boot
-    ./fonts
     ./jovian
     ./networking
     ./services
