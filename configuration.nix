@@ -4,6 +4,7 @@
     ./boot
     ./jovian
     ./networking
+    ./programs
     ./services
     ./users
   ];
