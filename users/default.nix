@@ -1,9 +1,5 @@
 { ... }:
 {
-  imports = [
-    ./root.nix
-    ./vanilla.nix
-  ];
-
+  # NixOS ❄: tmpfs as root
   users.mutableUsers = false;
 }
