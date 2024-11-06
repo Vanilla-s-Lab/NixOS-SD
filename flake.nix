@@ -9,7 +9,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  inputs.nur.url = github:nix-community/NUR;
   outputs = inputs@{ nixpkgs, home-manager, ... }: rec {
     nixosConfigurations."NixOS-SD" = nixpkgs.lib.nixosSystem {
 
