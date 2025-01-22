@@ -10,6 +10,7 @@
 
     ./networking/default.nix
     ./nixpkgs/config.nix
+    ./programs/steam.nix
 
     ./services/fail2ban.nix
     ./services/gnome.nix
