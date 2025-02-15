@@ -30,7 +30,9 @@
 
     deploy.nodes."NixOS-SD" = {
       hostname = "NixOS-SD.lan";
+
       fastConnection = true;
+      magicRollback = false;
 
       profiles.system = {
         sshUser = "root";
