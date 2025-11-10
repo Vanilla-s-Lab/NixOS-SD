@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./fonts/conf.nix
     ./fonts/fontconfig.nix
   ];
 
