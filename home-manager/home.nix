@@ -6,11 +6,8 @@
 
   home.packages = [
     pkgs.gnome-terminal
-    pkgs.nautilus
-    pkgs.unzip
-    pkgs.winetricks
-    pkgs.wineWowPackages.stable
+    pkgs.protontricks
   ];
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.11";
 }

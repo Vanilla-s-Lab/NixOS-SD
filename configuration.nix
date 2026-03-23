@@ -4,6 +4,8 @@
     ./boot/default.nix
     ./boot/loader.nix
 
+    ./hardware/graphics.nix
+
     ./jovian/decky-loader.nix
     ./jovian/devices.nix
     ./jovian/steam.nix
